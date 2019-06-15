@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    
+        <h1>Edit User :{{ one_user["id"] }}</h1>
+        <form action="/users/{{ one_user["id"] }}/edit" method="POST">
+            <p>First Name:<textarea name="fname">{{ one_user["first_name"] }} </textarea></p>
+            <p>Last Name: <textarea name="lname">{{ one_user["last_name"] }} </textarea></p>
+            <p>Email: <textarea name="email">{{ one_user["email"] }}</textarea></p>
+    
+            <input type="submit" value="Update">
+        </form>
+
+        
+
+</body>
+</html>
